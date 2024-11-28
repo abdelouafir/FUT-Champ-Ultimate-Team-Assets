@@ -105,10 +105,19 @@ html{
 .image {
     width: 5rem;
     height: 6rem;
+    transition: 0.3s ease-in-out;
+}
+.image:hover{
+    transform: scale(1.6);
 }
 .bgrimove {
     background-image: url(/src/assets/img/badge_gold.webp);
     background-size: cover;
+   
+}
+
+.bgrimove:hover {
+    
 }
 
 .imagedejeue {
@@ -209,7 +218,6 @@ html{
     color: white;
     font-size: 18px;
     margin-bottom: 12px;
-
 }
 
 .prrantPRG {
