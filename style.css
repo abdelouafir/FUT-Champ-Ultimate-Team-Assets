@@ -106,6 +106,10 @@ html{
     width: 5rem;
     height: 6rem;
 }
+.bgrimove {
+    background-image: url(/src/assets/img/badge_gold.webp);
+    background-size: cover;
+}
 
 .imagedejeue {
     width: fit-content;

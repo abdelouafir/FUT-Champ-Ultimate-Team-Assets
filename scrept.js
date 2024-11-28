@@ -25,11 +25,12 @@ let buttonAddjouer = document.getElementById('buttonAddjouer');
 let buttonAddjouer2 = document.getElementById('buttonAddjouer2');
 let Data = [] ;
 // event de ajout new jouer
-buttonAddjouer.addEventListener('click', setdata)
-buttonAddjouer2.addEventListener('click', setdata)
+buttonAddjouer.addEventListener('click', envoiyreDatatableu)
+buttonAddjouer2.addEventListener('click', envoiyreDatatableu)
 
 // function qui ajoutee les object a aryy
 function envoiyreDatatableu () {
+    let possion ;
     // variable de les form 
     if(choix == 1){
         let position = document.getElementById('position');
@@ -45,7 +46,8 @@ function envoiyreDatatableu () {
         let dribbling = document.getElementById('dribbling');
         let physical = document.getElementById('physical');
         let defending = document.getElementById('defending');
-        let info = {}
+        let info ;
+        possion = position.value ;
         Data.push(info = {
             position : position.value,
             NAme : NAme.value,
@@ -90,7 +92,7 @@ function envoiyreDatatableu () {
         let speedGK = document.getElementById('speedGK');
         let positioningGK = document.getElementById('positioningGK');
     
-        let info = {}
+        let info ;
         Data.push(info = {
             position : positionGK.value,
             NAme : NAme.value,
@@ -119,7 +121,81 @@ function envoiyreDatatableu () {
         reflexes.value = '';
         speedGK.value = '';
         positioningGK.value  = '';
-    }    
+    }   
+    let posion  ;
+    if (choix != 1){
+        posion = 'GK'
+    }
+    addCart(posion);
+}
+// les posion de les cart 
+let GKposision = document.getElementById('GKposision');
+let bontoch = document.getElementById('bontoch');
+let totalDeGk = 0 ;
+
+
+function addCart (position) {
+    if(position === 'GK') {
+        let newjouer = document.createElement('div')
+        newjouer.innerHTML = `
+         <div class="cartPerent">
+            <div>
+                <div class="toutal">
+                    <!-- les note de jeur -->
+                     <div><h3>${Data[totalDeGk].positionGK}</h3></div>
+                     <div><p>GK</p></div>
+                </div>
+                <div class="imagedejeue">
+                     <img src="/src/assets/img/p67340611.png" alt="">
+                </div>
+                <div class="nomeDejer">
+                     <h3> ${Data[totalDeGk].NAme}</h3>
+                </div>
+                <div class="pawordeJeur">
+                    <div>
+                        <div>pac</div>
+                        <div>${Data[totalDeGk].rating}</div>
+                    </div>
+                    <div>
+                        <div>sho</div>
+                        <div>${Data[totalDeGk].diving}</div>
+                    </div>
+                    <div>
+                        <div>pas</div>
+                        <div>${Data[totalDeGk].handling}</div>
+                    </div>
+                    <div>
+                        <div>dri</div>
+                        <div>${Data[totalDeGk].kicking}</div>
+                    </div>
+                    <div>
+                        <div>def</div>
+                        <div>${Data[totalDeGk].reflexes}</div>
+                    </div>
+                    <div>
+                        <div>phy</div>
+                        <div>${Data[totalDeGk].positionGK}</div>
+                    </div>
+                </div>
+                <div class="footerDecart">
+                    <!-- footer de cart  -->
+                    <div><img src="/src/assets/img/france.png" alt=""></div>
+                    <div><img src="/src/assets/img/Rial madrid.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        `
+        if(totalDeGk == 0) {
+            GKposision.classList.remove('bgrimove')
+            GKposision.appendChild(newjouer);
+        }else if (totalDeGk == 1) {
+            bontoch.classList.remove('bgrimove')
+            bontoch.appendChild(newjouer);
+        }
+       // toutal de golKeeper moddffid    
+        totalDeGk++ ;
+        
+    }
 }
 
 
