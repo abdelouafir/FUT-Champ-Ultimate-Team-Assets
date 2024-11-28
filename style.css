@@ -238,9 +238,7 @@ html{
     overflow-y: scroll;
 }
 .formContener .inputPhoto {
-    border: solid white 2px;
-    height: 1.2rem;
-    background: white;
+    
 }
 .formContener .inputPhoto input {
     background-color: white;
@@ -248,14 +246,9 @@ html{
     
 }
 .formContener .logoinput {
-    border: solid white 2px;
-    height: 1.2rem;
-    background: white;
+    
 }
 .formContener .flagInput {
-    border: solid white 2px;
-    height: 1.2rem;
-    background: white;
 }
 .formContener select {
     width: 100%;
