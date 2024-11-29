@@ -150,8 +150,16 @@ function envoiyreDatatableu () {
             posion = 'LB'
         }else if (position.value == 'RB'){
             posion = 'RB'
+        }else if (position.value == 'CAM'){
+            posion = 'CAM'
+        }else if (position.value == 'CM'){
+            posion = 'CM'
+        }else if (position.value == 'RW'){
+            posion = 'RW'
         }
+        
     }
+    alert(position.value)
     localStorage.setItem('players',JSON.stringify(Data))
     addCart(posion);
 }
@@ -161,7 +169,9 @@ let totalDeGk = 0 ;
 let totalCB = 0 ;
 let totalLB = 0 ;
 let totalRB = 0 ;
-
+let totalCAM = 0;
+let totalCM = 0 ;
+let totalRRW = 0 ;
 
 
 function addCart (position) {
@@ -444,6 +454,211 @@ function addCart (position) {
         alert('hello')
        // toutal de golKeeper moddffid    
        totalRB++;
+       toutal++ ;
+    } else if(position === 'CAM') {
+        // les posion de les cart 
+        let CAMposision = document.getElementById('CAMposision');
+
+        let bontoch5 = document.getElementById('bontoch5');
+
+        let newjouer = document.createElement('div')
+        newjouer.innerHTML = `
+         <div class="cartPerent">
+            <div>
+                <div class="toutal">
+                    <!-- les note de jeur -->
+                     <div><h3>${Data[toutal].rating}</h3></div>
+                     <div><p>${Data[toutal].position}</p></div>
+                </div>
+                <div class="imagedejeue">
+                     <img src="${Data[toutal].photo}" alt="">
+                </div>
+                <div class="nomeDejer">
+                     <h3> ${Data[toutal].NAme}</h3>
+                </div>
+                <div class="pawordeJeur">
+                    <div>
+                        <div>pac</div>
+                        <div>${Data[toutal].pace}</div>
+                    </div>
+                    <div>
+                        <div>sho</div>
+                        <div>${Data[toutal].shooting}</div>
+                    </div>
+                    <div>
+                        <div>pas</div>
+                        <div>${Data[toutal].position}</div>
+                    </div>
+                    <div>
+                        <div>dri</div>
+                        <div>${Data[toutal].dribbling}</div>
+                    </div>
+                    <div>
+                        <div>def</div>
+                        <div>${Data[toutal].defending}</div>
+                    </div>
+                    <div>
+                        <div>phy</div>
+                        <div>${Data[toutal].physical}</div>
+                    </div>
+                </div>
+                <div class="footerDecart">
+                    <!-- footer de cart  -->
+                    <div><img src="${Data[toutal].flag}" alt=""></div>
+                    <div><img src="${Data[toutal].logo}" alt=""></div>
+                </div>
+            </div>
+        </div>
+        `
+        if(totalCAM == 0) {
+            CAMposision.classList.remove('bgrimove')
+            CAMposision.appendChild(newjouer);
+        }else{
+            bontoch5.classList.remove('bgrimove');
+            bontoch5.appendChild(newjouer);
+
+        }
+        alert('hello')
+       // toutal de golKeeper moddffid    
+       totalCAM++;
+       toutal++ ;
+    }else if(position === 'CM') {
+        // les posion de les cart 
+        let LMposion = document.getElementById('LMposion');
+        let RMposion = document.getElementById('RMposion');
+
+        let bontoch5 = document.getElementById('bontoch5');
+
+        let newjouer = document.createElement('div')
+        newjouer.innerHTML = `
+         <div class="cartPerent">
+            <div>
+                <div class="toutal">
+                    <!-- les note de jeur -->
+                     <div><h3>${Data[toutal].rating}</h3></div>
+                     <div><p>${Data[toutal].position}</p></div>
+                </div>
+                <div class="imagedejeue">
+                     <img src="${Data[toutal].photo}" alt="">
+                </div>
+                <div class="nomeDejer">
+                     <h3> ${Data[toutal].NAme}</h3>
+                </div>
+                <div class="pawordeJeur">
+                    <div>
+                        <div>pac</div>
+                        <div>${Data[toutal].pace}</div>
+                    </div>
+                    <div>
+                        <div>sho</div>
+                        <div>${Data[toutal].shooting}</div>
+                    </div>
+                    <div>
+                        <div>pas</div>
+                        <div>${Data[toutal].position}</div>
+                    </div>
+                    <div>
+                        <div>dri</div>
+                        <div>${Data[toutal].dribbling}</div>
+                    </div>
+                    <div>
+                        <div>def</div>
+                        <div>${Data[toutal].defending}</div>
+                    </div>
+                    <div>
+                        <div>phy</div>
+                        <div>${Data[toutal].physical}</div>
+                    </div>
+                </div>
+                <div class="footerDecart">
+                    <!-- footer de cart  -->
+                    <div><img src="${Data[toutal].flag}" alt=""></div>
+                    <div><img src="${Data[toutal].logo}" alt=""></div>
+                </div>
+            </div>
+        </div>
+        `
+        if(totalCM == 0) {
+            LMposion.classList.remove('bgrimove')
+            LMposion.appendChild(newjouer);
+        }else if (totalCM == 1){
+            RMposion.classList.remove('bgrimove');
+            RMposion.appendChild(newjouer);
+        }   
+        else{
+            bontoch5.classList.remove('bgrimove');
+            bontoch5.appendChild(newjouer);
+        }
+        alert('hello')
+       // toutal de golKeeper moddffid    
+       totalCM++;
+       toutal++ ;
+    }else if(position === 'RW') {
+        // les posion de les cart 
+        let RWWposion = document.getElementById('RWWposion');
+
+        let bontoch6 = document.getElementById('bontoch6');
+
+        let newjouer = document.createElement('div')
+        newjouer.innerHTML = `
+         <div class="cartPerent">
+            <div>
+                <div class="toutal">
+                    <!-- les note de jeur -->
+                     <div><h3>${Data[toutal].rating}</h3></div>
+                     <div><p>${Data[toutal].position}</p></div>
+                </div>
+                <div class="imagedejeue">
+                     <img src="${Data[toutal].photo}" alt="">
+                </div>
+                <div class="nomeDejer">
+                     <h3> ${Data[toutal].NAme}</h3>
+                </div>
+                <div class="pawordeJeur">
+                    <div>
+                        <div>pac</div>
+                        <div>${Data[toutal].pace}</div>
+                    </div>
+                    <div>
+                        <div>sho</div>
+                        <div>${Data[toutal].shooting}</div>
+                    </div>
+                    <div>
+                        <div>pas</div>
+                        <div>${Data[toutal].position}</div>
+                    </div>
+                    <div>
+                        <div>dri</div>
+                        <div>${Data[toutal].dribbling}</div>
+                    </div>
+                    <div>
+                        <div>def</div>
+                        <div>${Data[toutal].defending}</div>
+                    </div>
+                    <div>
+                        <div>phy</div>
+                        <div>${Data[toutal].physical}</div>
+                    </div>
+                </div>
+                <div class="footerDecart">
+                    <!-- footer de cart  -->
+                    <div><img src="${Data[toutal].flag}" alt=""></div>
+                    <div><img src="${Data[toutal].logo}" alt=""></div>
+                </div>
+            </div>
+        </div>
+        `
+        if(totalRRW == 0) {
+            RWWposion.classList.remove('bgrimove')
+            RWWposion.appendChild(newjouer);
+        }  
+        else{
+            bontoch6.classList.remove('bgrimove');
+            bontoch6.appendChild(newjouer);
+        }
+        alert('hello')
+       // toutal de golKeeper moddffid    
+       totalRRW++;
        toutal++ ;
     }
     console.log(Data)
