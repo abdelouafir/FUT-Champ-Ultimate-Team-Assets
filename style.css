@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url(/src/assets/img/stadium_background.webp);
+    background-image: url(./src/assets/img/stadium_background.webp);
     padding: 2rem;
 }
 html{
@@ -16,7 +16,7 @@ html{
 .tiran {
     height: 100vh;
     width: 70%;
-    background-image: url(/src/assets/img/stadium_background.webp);
+    background-image: url(./src/assets/img/stadium_background.webp);
     background-repeat: no-repeat;
     background-size: 100%;
     margin: 2rem;
@@ -96,7 +96,7 @@ html{
 }
 
 .cartPerent {
-    background-image: url(/src/assets/img/badge_gold.webp);
+    background-image: url(./src/assets/img/badge_gold.webp);
     background-position: center ;
     background-size: cover;
     width: 5rem;
@@ -111,7 +111,7 @@ html{
     transform: scale(1.6);
 }
 .bgrimove {
-    background-image: url(/src/assets/img/badge_gold.webp);
+    background-image: url(./src/assets/img/badge_gold.webp);
     background-size: cover;
    
 }
@@ -267,3 +267,42 @@ html{
     display: grid;
     grid-template-columns: repeat(7,1fr);
 }
+
+/* style de form updat et suprision start */
+.formalert {
+    background: #000000a3;
+    width: 12rem;
+    height: 10rem;
+    padding: 2rem;
+    border-radius: 20px;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+.modif {
+    background-color: #0080009e;
+    width: 4rem;
+    height: 1.5rem;
+    border-radius: 5px;
+    color: white;
+
+}
+.surision {
+    background-color: hsla(0, 100%, 50%, 0.621);
+    width: 5rem;
+    height: 1.5rem;
+    color: white;
+    border-radius: 5px;
+
+}
+.button {
+    width: fit-content;
+    margin: auto;
+}
+.formalert .cartPerent {
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+/* style de form updat et suprision END */
+
