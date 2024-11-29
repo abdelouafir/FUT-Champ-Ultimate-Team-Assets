@@ -156,6 +156,10 @@ function envoiyreDatatableu () {
             posion = 'CM'
         }else if (position.value == 'RW'){
             posion = 'RW'
+        }else if (position.value == 'ST'){
+            posion = 'ST'
+        }else if (position.value == 'LW'){
+            posion = 'LW'
         }
         
     }
@@ -172,6 +176,8 @@ let totalRB = 0 ;
 let totalCAM = 0;
 let totalCM = 0 ;
 let totalRRW = 0 ;
+let totalLW = 0 ;
+let totalST = 0 ;
 
 
 function addCart (position) {
@@ -660,14 +666,139 @@ function addCart (position) {
        // toutal de golKeeper moddffid    
        totalRRW++;
        toutal++ ;
+    }else if(position === 'LW') {
+        // les posion de les cart 
+        let LWposion = document.getElementById('LWposion');
+
+        let bontoch6 = document.getElementById('bontoch6');
+
+        let newjouer = document.createElement('div')
+        newjouer.innerHTML = `
+         <div class="cartPerent">
+            <div>
+                <div class="toutal">
+                    <!-- les note de jeur -->
+                     <div><h3>${Data[toutal].rating}</h3></div>
+                     <div><p>${Data[toutal].position}</p></div>
+                </div>
+                <div class="imagedejeue">
+                     <img src="${Data[toutal].photo}" alt="">
+                </div>
+                <div class="nomeDejer">
+                     <h3> ${Data[toutal].NAme}</h3>
+                </div>
+                <div class="pawordeJeur">
+                    <div>
+                        <div>pac</div>
+                        <div>${Data[toutal].pace}</div>
+                    </div>
+                    <div>
+                        <div>sho</div>
+                        <div>${Data[toutal].shooting}</div>
+                    </div>
+                    <div>
+                        <div>pas</div>
+                        <div>${Data[toutal].position}</div>
+                    </div>
+                    <div>
+                        <div>dri</div>
+                        <div>${Data[toutal].dribbling}</div>
+                    </div>
+                    <div>
+                        <div>def</div>
+                        <div>${Data[toutal].defending}</div>
+                    </div>
+                    <div>
+                        <div>phy</div>
+                        <div>${Data[toutal].physical}</div>
+                    </div>
+                </div>
+                <div class="footerDecart">
+                    <!-- footer de cart  -->
+                    <div><img src="${Data[toutal].flag}" alt=""></div>
+                    <div><img src="${Data[toutal].logo}" alt=""></div>
+                </div>
+            </div>
+        </div>
+        `
+        if(totalLW == 0) {
+            LWposion.classList.remove('bgrimove')
+            LWposion.appendChild(newjouer);
+        }  
+        else{
+            bontoch6.classList.remove('bgrimove');
+            bontoch6.appendChild(newjouer);
+        }
+  
+       // toutal de golKeeper moddffid    
+       totalLW++;
+       toutal++ ;
+    }else if(position === 'ST') {
+        // les posion de les cart 
+        let STposion = document.getElementById('STposision');
+
+        let bontoch7 = document.getElementById('bontoch7');
+
+        let newjouer = document.createElement('div')
+        newjouer.innerHTML = `
+         <div class="cartPerent">
+            <div>
+                <div class="toutal">
+                    <!-- les note de jeur -->
+                     <div><h3>${Data[toutal].rating}</h3></div>
+                     <div><p>${Data[toutal].position}</p></div>
+                </div>
+                <div class="imagedejeue">
+                     <img src="${Data[toutal].photo}" alt="">
+                </div>
+                <div class="nomeDejer">
+                     <h3> ${Data[toutal].NAme}</h3>
+                </div>
+                <div class="pawordeJeur">
+                    <div>
+                        <div>pac</div>
+                        <div>${Data[toutal].pace}</div>
+                    </div>
+                    <div>
+                        <div>sho</div>
+                        <div>${Data[toutal].shooting}</div>
+                    </div>
+                    <div>
+                        <div>pas</div>
+                        <div>${Data[toutal].position}</div>
+                    </div>
+                    <div>
+                        <div>dri</div>
+                        <div>${Data[toutal].dribbling}</div>
+                    </div>
+                    <div>
+                        <div>def</div>
+                        <div>${Data[toutal].defending}</div>
+                    </div>
+                    <div>
+                        <div>phy</div>
+                        <div>${Data[toutal].physical}</div>
+                    </div>
+                </div>
+                <div class="footerDecart">
+                    <!-- footer de cart  -->
+                    <div><img src="${Data[toutal].flag}" alt=""></div>
+                    <div><img src="${Data[toutal].logo}" alt=""></div>
+                </div>
+            </div>
+        </div>
+        `
+        if(totalST == 0) {
+            STposion.classList.remove('bgrimove')
+            STposion.appendChild(newjouer);
+        }  
+        else{
+            bontoch7.classList.remove('bgrimove');
+            bontoch7.appendChild(newjouer);
+        }
+  
+       // toutal de golKeeper moddffid    
+       totalST++;
+       toutal++ ;
     }
-    console.log(Data)
 }
-
-
-
-
-
-
-
-
