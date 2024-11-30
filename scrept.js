@@ -271,7 +271,7 @@
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
                     <div class="imagedejeue">
-                        <img src="${Data[toutal].photo}" alt="">
+                        <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
                         <h3 class="nameplayer"> ${Data[toutal].NAme}</h3>
@@ -304,8 +304,8 @@
                     </div>
                     <div class="footerDecart">
                         <!-- footer de cart  -->
-                        <div class="flag"><img src="${Data[toutal].flag}" alt=""></div>
-                        <div class="logo"><img src="${Data[toutal].logo}" alt=""></div>
+                        <div><img class="flag" src="${Data[toutal].flag}" alt=""></div>
+                        <div><img class="logo" src="${Data[toutal].logo}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -342,7 +342,7 @@
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
                     <div class="imagedejeue">
-                        <img src="${Data[toutal].photo}" alt="">
+                        <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
                         <h3 class="nameplayer">  ${Data[toutal].NAme}</h3>
@@ -375,8 +375,8 @@
                     </div>
                     <div class="footerDecart">
                         <!-- footer de cart  -->
-                        <div class="flag"><img src="${Data[toutal].flag}" alt=""></div>
-                        <div class="logo"><img src="${Data[toutal].logo}" alt=""></div>
+                        <div><img class="flag" src="${Data[toutal].flag}" alt=""></div>
+                        <div><img class="logo" src="${Data[toutal].logo}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -410,7 +410,7 @@
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
                     <div class="imagedejeue">
-                        <img src="${Data[toutal].photo}" alt="">
+                        <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
                         <h3 class="nameplayer">  ${Data[toutal].NAme}</h3>
@@ -443,8 +443,8 @@
                     </div>
                     <div class="footerDecart">
                         <!-- footer de cart  -->
-                        <div class="flag"><img src="${Data[toutal].flag}" alt=""></div>
-                        <div class="logo"><img src="${Data[toutal].logo}" alt=""></div>
+                        <div><img class="flag" src="${Data[toutal].flag}" alt=""></div>
+                        <div><img class="logo" src="${Data[toutal].logo}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -477,7 +477,7 @@
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
                     <div class="imagedejeue">
-                        <img src="${Data[toutal].photo}" alt="">
+                        <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
                         <h3 class="nameplayer">  ${Data[toutal].NAme}</h3>
@@ -510,8 +510,8 @@
                     </div>
                     <div class="footerDecart">
                         <!-- footer de cart  -->
-                        <div class="flag"><img src="${Data[toutal].flag}" alt=""></div>
-                        <div class="logo"><img src="${Data[toutal].logo}" alt=""></div>
+                        <div><img class="flag" src="${Data[toutal].flag}" alt=""></div>
+                        <div><img class="logo" src="${Data[toutal].logo}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -545,7 +545,7 @@
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
                     <div class="imagedejeue">
-                        <img src="${Data[toutal].photo}" alt="">
+                        <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
                         <h3 class="nameplayer">  ${Data[toutal].NAme}</h3>
@@ -578,8 +578,8 @@
                     </div>
                     <div class="footerDecart">
                         <!-- footer de cart  -->
-                        <div class="flag"><img src="${Data[toutal].flag}" alt=""></div>
-                        <div class="logo"><img src="${Data[toutal].logo}" alt=""></div>
+                        <div><img class="flag" src="${Data[toutal].flag}" alt=""></div>
+                        <div><img class="logo" src="${Data[toutal].logo}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -615,7 +615,7 @@
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
                     <div class="imagedejeue">
-                        <img src="${Data[toutal].photo}" alt="">
+                        <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
                         <h3 class="nameplayer">  ${Data[toutal].NAme}</h3>
@@ -648,8 +648,8 @@
                     </div>
                     <div class="footerDecart">
                         <!-- footer de cart  -->
-                        <div class="flag"><img src="${Data[toutal].flag}" alt=""></div>
-                        <div class="logo"><img src="${Data[toutal].logo}" alt=""></div>
+                        <div><img class="flag" src="${Data[toutal].flag}" alt=""></div>
+                        <div><img class="logo" src="${Data[toutal].logo}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -682,7 +682,7 @@
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
                     <div class="imagedejeue">
-                        <img src="${Data[toutal].photo}" alt="">
+                        <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
                         <h class="nameplayer"3 >${Data[toutal].NAme}</h3>
@@ -715,8 +715,8 @@
                     </div>
                     <div class="footerDecart">
                         <!-- footer de cart  -->
-                        <div class="flag"><img src="${Data[toutal].flag}" alt=""></div>
-                        <div class="logo"><img src="${Data[toutal].logo}" alt=""></div>
+                        <div><img class="flag" src="${Data[toutal].flag}" alt=""></div>
+                        <div><img class="logo" src="${Data[toutal].logo}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -749,7 +749,7 @@
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
                     <div class="imagedejeue">
-                        <img src="${Data[toutal].photo}" alt="">
+                        <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
                         <h3 class="nameplayer" >${Data[toutal].NAme}</h3>
@@ -782,8 +782,8 @@
                     </div>
                     <div class="footerDecart">
                         <!-- footer de cart  -->
-                        <div class="flag"><img src="${Data[toutal].flag}" alt=""></div>
-                        <div class="logo"><img src="${Data[toutal].logo}" alt=""></div>
+                        <div><img class="flag" src="${Data[toutal].flag}" alt=""></div>
+                        <div><img class="logo" src="${Data[toutal].logo}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -812,13 +812,16 @@
                      
             const rating = clickedCard.querySelector('.rating').textContent;
             const position = clickedCard.querySelector('.position').textContent;
-            const imagedejeue = clickedCard.querySelector('.imagedejeue').textContent;
+            const imagedejeue = clickedCard.querySelector('.photojouer').src;
             const pace = clickedCard.querySelector('.pace').textContent;
             const shoting = clickedCard.querySelector('.shoting').textContent;
             const passing = clickedCard.querySelector('.passing').textContent;
             const dribling = clickedCard.querySelector('.dribling').textContent;
             const difending = clickedCard.querySelector('.difending').textContent;
             const physical = clickedCard.querySelector('.physical').textContent;
+            const flag = clickedCard.querySelector('.flag').src;
+            const logo = clickedCard.querySelector('.logo').src;
+
             
             console.log(playercart)
             console.log(rating)
@@ -831,9 +834,12 @@
             console.log(difending)    
             console.log(physical)    
             console.log(imagedejeue)
+            console.log(flag)
+            console.log(logo)
 
 
-          
+
+        //  
             let formmodfification = document.createElement('div')
             formmodfification.innerHTML = `
             <div class="cartPerent">
@@ -880,8 +886,8 @@
                 </div>
                 <div class="footerDecart">
                     <!-- footer de cart  -->
-                    <div><img src="/src/assets/img/france.png" alt=""></div>
-                    <div><img src="/src/assets/img/Rial madrid.png" alt=""></div>
+                    <div><img src="${flag}" alt=""></div>
+                    <div><img src="${logo}" alt=""></div>
                 </div>
             </div>
         </div>
@@ -891,9 +897,11 @@
         </div>
             `
             let formalert = document.querySelector('.formalert')
+            formalert.innerHTML = '';
             formalert.appendChild(formmodfification)
             formalert.classList.remove('heddin')
                
         }
     })
     
+
