@@ -52,9 +52,12 @@
     
     // function qui ajoutee les object a aryy
     function envoiyreDatatableu () {
-        
         let position = document.getElementById('position');
         if(choix == 1){
+            if (!validision()) {
+                return;
+            }
+            
             let id = document.querySelector('.playerId')
             let NAme = document.getElementById('NAme');
             let photo = document.getElementById('photo');
@@ -73,7 +76,6 @@
             if (!id.value.trim()) {
                 id.value = 'cb0'; 
             }
-         
 
             Data.push(info = {
                 id: id.value,
@@ -106,6 +108,9 @@
             physical.value  = '' ;
         
         }else{
+            if (!validisionGK()) {
+                return;
+            }
             let positionGK = document.getElementById('positionGK');
             let NAme = document.getElementById('NAmeGK');
             let photo = document.getElementById('photoGK');
@@ -119,6 +124,8 @@
             let reflexes = document.getElementById('reflexesGK');
             let speedGK = document.getElementById('speedGK');
             let positioningGK = document.getElementById('positioningGK');
+
+           
         
             let info ;
             Data.push(info = {
@@ -967,6 +974,159 @@ function deletePlayer(playercart) {
         alert('l opération a été annulée');
     }
 }
+
+// validision de jouer meleu 
+function validision() {
+    let namevalid = /[a-zA-Z]+(\s[a-zA-Z]+)*/; 
+    let clubValid = /^[a-zA-Z]+\s[a-zA-Z]+$/; 
+    let validphoto = /^https:\/\/.+$/; 
+    let numbervalid = /^\d{2}$/; 
+
+    let position = document.getElementById("position").value;
+    let playerName = document.getElementById("NAme").value;
+    let photo = document.getElementById("photo").value;
+    let flag = document.getElementById("flag").value;
+    let club = document.getElementById("club").value;
+    let logo = document.getElementById("logo").value;
+    let rating = document.getElementById("rating").value;
+    let pace = document.getElementById("pace").value;
+    let passing = document.getElementById("passing").value;
+    let dribbling = document.getElementById("dribbling").value;
+    let defending = document.getElementById("defending").value;
+    let physical = document.getElementById("physical").value;
+
+    let validposion = namevalid.test(position);
+    let validnome = namevalid.test(playerName);
+    let validphot = validphoto.test(photo);
+    let validflag = validphoto.test(flag);
+    let validclub = clubValid.test(club);
+    let validlogo = validphoto.test(logo);
+    let validrating = numbervalid.test(rating);
+    let validpace = numbervalid.test(pace);
+    let validpassing = numbervalid.test(passing);
+    let validdribbling = numbervalid.test(dribbling);
+    let validdefending = numbervalid.test(defending);
+    let validphysical = numbervalid.test(physical);
+
+
+
+    if (!validposion) {
+        document.getElementById("position").style.border = "2px solid red";
+        return false;
+    }
+    if (!validnome) {
+        document.getElementById("NAme").style.border = "2px solid red";
+        return false;
+    }
+    if (!validphot) {
+        document.getElementById("photo").style.border = "2px solid red";
+        return false;
+    }
+    if (!validflag) {
+        document.getElementById("flag").style.border = "2px solid red";
+        return false;
+    }
+    if (!validclub) {
+        document.getElementById("club").style.border = "2px solid red";
+        return false;
+    }
+    if (!validlogo) {
+        document.getElementById("logo").style.border = "2px solid red";
+        return false;
+    }
+    if (!validrating || !validpace || !validpassing || !validdribbling || !validdefending || !validphysical) {
+        if (!validrating) document.getElementById("rating").style.border = "2px solid red";
+        if (!validpace) document.getElementById("pace").style.border = "2px solid red";
+        if (!validpassing) document.getElementById("passing").style.border = "2px solid red";
+        if (!validdribbling) document.getElementById("dribbling").style.border = "2px solid red";
+        if (!validdefending) document.getElementById("defending").style.border = "2px solid red";
+        if (!validphysical) document.getElementById("physical").style.border = "2px solid red";
+        return false;
+    }
+
+    alert("Form is valid!");
+   return true;
+}
+
+// validision golkeeper
+function validisionGK() {
+    let namevalid = /[a-zA-Z]+(\s[a-zA-Z]+)*/; 
+    let clubValid = /^[a-zA-Z]+\s[a-zA-Z]+$/; 
+    let validphoto = /^https:\/\/.+$/; 
+    let numbervalid = /^\d{2}$/; 
+
+    let position = document.getElementById("positionGK").value;
+    let playerName = document.getElementById("NAmeGK").value;
+    let photo = document.getElementById("photoGK").value;
+    let flag = document.getElementById("flagGK").value;
+    let club = document.getElementById("clubGK").value;
+    let logo = document.getElementById("logoGK").value;
+    let rating = document.getElementById("ratingGK").value;
+    let divingGK = document.getElementById("divingGK").value;
+    let handlingGK = document.getElementById("handlingGK").value;
+    let kickingGK = document.getElementById("kickingGK").value;
+    let reflexesGK = document.getElementById("reflexesGK").value;
+    let speedGK = document.getElementById("speedGK").value;
+
+    let validposion = namevalid.test(position);
+    let validnome = namevalid.test(playerName);
+    let validphot = validphoto.test(photo);
+    let validflag = validphoto.test(flag);
+    let validclub = clubValid.test(club);
+    let validlogo = validphoto.test(logo);
+    let validrating = numbervalid.test(rating);
+    let validpace = numbervalid.test(divingGK);
+    let validpassing = numbervalid.test(handlingGK);
+    let validdribbling = numbervalid.test(kickingGK);
+    let validdefending = numbervalid.test(reflexesGK);
+    let validphysical = numbervalid.test(speedGK);
+
+
+
+    if (!validposion) {
+        document.getElementById("positionGK").style.border = "2px solid red";
+        return false;
+    }
+    if (!validnome) {
+        document.getElementById("NAmeGK").style.border = "2px solid red";
+        return false;
+    }
+    if (!validphot) {
+        document.getElementById("photoGK").style.border = "2px solid red";
+        return false;
+    }
+    if (!validflag) {
+        document.getElementById("flagGK").style.border = "2px solid red";
+        return false;
+    }
+    if (!validclub) {
+        document.getElementById("club").style.border = "2px solid red";
+        return false;
+    }
+    if (!validlogo) {
+        document.getElementById("logoGK").style.border = "2px solid red";
+        return false;
+    }
+    if (!validrating || !validpace || !validpassing || !validdribbling || !validdefending || !validphysical) {
+        if (!validrating) document.getElementById("ratingGK").style.border = "2px solid red";
+        if (!validpace) document.getElementById("divingGK").style.border = "2px solid red";
+        if (!validpassing) document.getElementById("handlingGK").style.border = "2px solid red";
+        if (!validdribbling) document.getElementById("kickingGK").style.border = "2px solid red";
+        if (!validdefending) document.getElementById("reflexesGK").style.border = "2px solid red";
+        if (!validphysical) document.getElementById("speedGK").style.border = "2px solid red";
+        return false;
+    }
+
+    alert("Form et valid!");
+   return true;
+}
+
+
+
+
+
+
+
 
 
 
