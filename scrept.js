@@ -867,7 +867,7 @@
                 </div>
                 <div class="button">
                     <button class="modif" onclick="modification('${id}','${playercart}','${rating}','${position}', '${imagedejeue}', '${pace}', '${shoting}', '${passing}', '${dribling}', '${difending}', '${physical}', '${flag}', '${logo}')">modification</button>
-                    <button class="surision">supprimer</button>
+                    <button class="surision" onclick="deletePlayer('${playercart}')">supprimer</button>
                 </div>
             `;
             
@@ -923,17 +923,12 @@ buttonmetreajour.addEventListener('click', () => {
     const updatedDribbling = document.getElementById('dribblingmodifid').value;
     const updatedDefending = document.getElementById('defendingmodifid').value;
     const updatedPhysical = document.getElementById('physicalmodifid').value;
-
-   
-
-   
-
-
         Data.forEach(element => {
             console.log(element)
             if (element.NAme === namemod) {
                 element.NAme = updatedPlayercart;
                 element.position = updatedPosition;
+                element.pace = updatedPace
                 element.photo = updatedImage;
                 element.flag = updatedFlag;
                 element.club = updatedClub;
@@ -957,28 +952,21 @@ buttonmetreajour.addEventListener('click', () => {
         let formalert = document.querySelector('.formalert');
         formalert.classList.add('heddin');
         formContenermodiffictionr.classList.add('heddin');
+       }
+       
+)};
 
-
-})};
-
-
-
-
-
-
-
-// 1733013200470
-
-
-
-
-
-
-
-
-
-
-
+// functiob delete 
+function deletePlayer(playercart) {
+    if (confirm('es-tu sur de la suppresion' )) {
+        Data = Data.filter(element => element.NAme !== playercart);
+        localStorage.setItem('players', JSON.stringify(Data));
+        
+        alert(`${playercart} suprimé le jouer`);
+    } else {
+        alert('l opération a été annulée');
+    }
+}
 
 
 
