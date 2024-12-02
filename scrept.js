@@ -756,7 +756,7 @@
             <div class="cartPerent">
                 <div>
                     <div class="toutal">
-                    <input type="hidden" id="playerId" value="st${totalST}">
+                    <input type="hidden" class="playerId" id="playerId" value="st${totalST}">
                       <!-- les note de jeur -->
                         <div class="rating"><h3>${Data[toutal].rating}</h3></div>
                         <div class="position"><p>${Data[toutal].position}</p></div>
