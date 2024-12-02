@@ -49,11 +49,13 @@
     buttonAddjouer.addEventListener('click', envoiyreDatatableu)
     buttonAddjouer2.addEventListener('click', envoiyreDatatableu)
 
+    
     // function qui ajoutee les object a aryy
     function envoiyreDatatableu () {
+        
         let position = document.getElementById('position');
         if(choix == 1){
-        
+            let id = document.querySelector('.playerId')
             let NAme = document.getElementById('NAme');
             let photo = document.getElementById('photo');
             let flag = document.getElementById('flag');
@@ -67,8 +69,14 @@
             let physical = document.getElementById('physical');
             let defending = document.getElementById('defending');
             let info ;
+
+            if (!id.value.trim()) {
+                id.value = 'cb0'; 
+            }
+         
+
             Data.push(info = {
-                id: Date.now().toString(),
+                id: id.value,
                 position : position.value,
                 NAme : NAme.value,
                 photo : photo.value,
@@ -114,7 +122,7 @@
         
             let info ;
             Data.push(info = {
-                id: Date.now().toString(),
+                
                 position : positionGK.value,
                 NAme : NAme.value,
                 photo : photo.value,
@@ -180,7 +188,7 @@
     let totalLW = 0 ;
     let totalST = 0 ;
 
-
+    let uniqueId = Date.now(); 
     function addCart (position) {
         
         if(position === 'GK') {
@@ -253,19 +261,18 @@
             
         }else if(position === 'CB') {
             // les posion de les cart 
+            document.getElementById('playerId').value = `cb${totalCB+1}`
+            
             let CBposision1 = document.getElementById('CBposision1');
             let CBposision2 = document.getElementById('CBposision2');
-
             let bontoch2 = document.getElementById('bontoch2');
             let bontoch3 = document.getElementById('bontoch3');
-
-            
-
             let newjouer = document.createElement('div')
             newjouer.innerHTML = `
-            <div class="cartPerent">
+            <div class="cartPerent" id="${Date.now()}">
                 <div>
                     <div class="toutal">
+                     <input type="hidden" class='playerId' id="playerId" value="cb${totalCB+1}"
                         <!-- les note de jeur -->
                         <div class="rating"><h3>${Data[toutal].rating}</h3></div>
                         <div class="position"><p>${Data[toutal].position}</p></div>
@@ -274,7 +281,7 @@
                         <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
-                        <h3 class="nameplayer"> ${Data[toutal].NAme}</h3>
+                        <h3 class="nameplayer">${Data[toutal].NAme}</h3>
                     </div>
                     <div class="pawordeJeur">
                         <div>
@@ -337,7 +344,8 @@
             <div class="cartPerent">
                 <div>
                     <div class="toutal">
-                        <!-- les note de jeur -->
+                    <input type="hidden" class='playerId' id="playerId" value="lb${totalLB}">
+                       <!-- les note de jeur -->
                         <div class="rating"><h3>${Data[toutal].rating}</h3></div>
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
@@ -345,7 +353,7 @@
                         <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
-                        <h3 class="nameplayer">  ${Data[toutal].NAme}</h3>
+                        <h3 class="nameplayer">${Data[toutal].NAme}</h3>
                     </div>
                     <div class="pawordeJeur">
                         <div>
@@ -405,7 +413,8 @@
             <div class="cartPerent">
                 <div>
                     <div class="toutal">
-                        <!-- les note de jeur -->
+                    <input type="hidden" class="playerId" id="playerId" value="rb${totalRB}">
+                       <!-- les note de jeur -->
                         <div class="rating"><h3>${Data[toutal].rating}</h3></div>
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
@@ -413,7 +422,7 @@
                         <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
-                        <h3 class="nameplayer">  ${Data[toutal].NAme}</h3>
+                        <h3 class="nameplayer">${Data[toutal].NAme}</h3>
                     </div>
                     <div class="pawordeJeur">
                         <div>
@@ -472,6 +481,7 @@
             <div class="cartPerent">
                 <div>
                     <div class="toutal">
+                    <input type="hidden" class="playerId" id="playerId" value="cam${totalCAM}"
                         <!-- les note de jeur -->
                         <div class="rating"><h3>${Data[toutal].rating}</h3></div>
                         <div class="position"><p>${Data[toutal].position}</p></div>
@@ -480,7 +490,7 @@
                         <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
-                        <h3 class="nameplayer">  ${Data[toutal].NAme}</h3>
+                        <h3 class="nameplayer">${Data[toutal].NAme}</h3>
                     </div>
                     <div class="pawordeJeur">
                         <div>
@@ -540,7 +550,8 @@
             <div class="cartPerent">
                 <div>
                     <div class="toutal">
-                        <!-- les note de jeur -->
+                    <input type="hidden" class="playerId" id="playerId" value="cm${totalCM}">
+                       <!-- les note de jeur -->
                         <div class="rating"><h3>${Data[toutal].rating}</h3></div>
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
@@ -548,7 +559,7 @@
                         <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
-                        <h3 class="nameplayer">  ${Data[toutal].NAme}</h3>
+                        <h3 class="nameplayer">${Data[toutal].NAme}</h3>
                     </div>
                     <div class="pawordeJeur">
                         <div>
@@ -610,7 +621,7 @@
             <div class="cartPerent">
                 <div>
                     <div class="toutal">
-                        <!-- les note de jeur -->
+                    <input type="hidden" id="playerId" class="playerId" value="rw${totalRRW}">                        <!-- les note de jeur -->
                         <div class="rating"><h3>${Data[toutal].rating}</h3></div>
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
@@ -618,7 +629,7 @@
                         <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
-                        <h3 class="nameplayer">  ${Data[toutal].NAme}</h3>
+                        <h3 class="nameplayer">${Data[toutal].NAme}</h3>
                     </div>
                     <div class="pawordeJeur">
                         <div>
@@ -677,7 +688,8 @@
             <div class="cartPerent">
                 <div>
                     <div class="toutal">
-                        <!-- les note de jeur -->
+                     <input type="hidden" class="playerId" id="lw${totalLW}">
+                      <!-- les note de jeur -->
                         <div class="rating"><h3>${Data[toutal].rating}</h3></div>
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
@@ -685,7 +697,7 @@
                         <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
-                        <h class="nameplayer"3 >${Data[toutal].NAme}</h3>
+                        <h3 class="nameplayer">${Data[toutal].NAme}</h3>
                     </div>
                     <div class="pawordeJeur">
                         <div>
@@ -744,7 +756,8 @@
             <div class="cartPerent">
                 <div>
                     <div class="toutal">
-                        <!-- les note de jeur -->
+                    <input type="hidden" id="playerId" value="st${totalST}">
+                      <!-- les note de jeur -->
                         <div class="rating"><h3>${Data[toutal].rating}</h3></div>
                         <div class="position"><p>${Data[toutal].position}</p></div>
                     </div>
@@ -752,7 +765,7 @@
                         <img class="photojouer" src="${Data[toutal].photo}" alt="">
                     </div>
                     <div class="nomeDejer">
-                        <h3 class="nameplayer" >${Data[toutal].NAme}</h3>
+                        <h3 class="nameplayer">${Data[toutal].NAme}</h3>
                     </div>
                     <div class="pawordeJeur">
                         <div>
@@ -806,10 +819,11 @@
 
     // add event a les posision   
     document.addEventListener('click', (event) => {
+        
         const clickedCard = event.target.closest('.image'); 
         if (clickedCard) {
+            const id = clickedCard.querySelector('.playerId').value ;
             const playercart = clickedCard.querySelector('.nameplayer').textContent;
-                     
             const rating = clickedCard.querySelector('.rating').textContent;
             const position = clickedCard.querySelector('.position').textContent;
             const imagedejeue = clickedCard.querySelector('.photojouer').src;
@@ -821,87 +835,153 @@
             const physical = clickedCard.querySelector('.physical').textContent;
             const flag = clickedCard.querySelector('.flag').src;
             const logo = clickedCard.querySelector('.logo').src;
-
-            
-            console.log(playercart)
-            console.log(rating)
-            console.log(position) 
-            console.log(passing)
-            // console.log(nomeDejer)    
-            console.log(pace)        
-            console.log(shoting)    
-            console.log(dribling)    
-            console.log(difending)    
-            console.log(physical)    
-            console.log(imagedejeue)
-            console.log(flag)
-            console.log(logo)
-
-
-
-        //  
-            let formmodfification = document.createElement('div')
-            formmodfification.innerHTML = `
-            <div class="cartPerent">
-            <div>
-                <div class="toutal">
-                    <!-- les note de jeur -->
-                     <div><h3>${rating}</h3></div>
-                     <div><p>${position}</p></div>
-                </div>
-                <div class="imagedejeue">
-                    <!-- image de jeuer -->
-                     <img src="${imagedejeue}" alt="">
-                </div>
-                <div class="nomeDejer">
-                    <!-- nome de jeuer  -->
-                     <h3> ${playercart}</h3>
-                </div>
-                <div class="pawordeJeur">
-                    <!-- les number de jeur -->
-                    <div>
-                        <div>pac</div>
-                        <div>${pace}</div>
-                    </div>
-                    <div>
-                        <div>sho</div>
-                        <div>${shoting}</div>
-                    </div>
-                    <div>
-                        <div>pas</div>
-                        <div>${passing}</div>
-                    </div>
-                    <div>
-                        <div>dri</div>
-                        <div>${dribling}</div>
-                    </div>
-                    <div>
-                        <div>def</div>
-                        <div>${difending}</div>
-                    </div>
-                    <div>
-                        <div>phy</div>
-                        <div>${physical}</div>
-                    </div>
-                </div>
-                <div class="footerDecart">
-                    <!-- footer de cart  -->
-                    <div><img src="${flag}" alt=""></div>
-                    <div><img src="${logo}" alt=""></div>
-                </div>
-            </div>
-        </div>
-        <div class="button">
-            <button class="modif">modification</button>
-            <button class="surision">suprmer</button>
-        </div>
-            `
-            let formalert = document.querySelector('.formalert')
-            formalert.innerHTML = '';
-            formalert.appendChild(formmodfification)
-            formalert.classList.remove('heddin')
-               
-        }
-    })
     
+            // show les element 
+            let formmodfification = document.createElement('div');
+            formmodfification.innerHTML = `
+                <div class="cartPerent">
+                    <div>
+                        <div class="toutal">
+                            <div><h3>${rating}</h3></div>
+                            <div><p>${position}</p></div>
+                        </div>
+                        <div class="imagedejeue">
+                            <img src="${imagedejeue}" alt="">
+                        </div>
+                        <div class="nomeDejer">
+                            <h3>${playercart}</h3>
+                        </div>
+                        <div class="pawordeJeur">
+                            <div><div>pac</div><div>${pace}</div></div>
+                            <div><div>sho</div><div>${shoting}</div></div>
+                            <div><div>pas</div><div>${passing}</div></div>
+                            <div><div>dri</div><div>${dribling}</div></div>
+                            <div><div>def</div><div>${difending}</div></div>
+                            <div><div>phy</div><div>${physical}</div></div>
+                        </div>
+                        <div class="footerDecart">
+                            <div><img src="${flag}" alt=""></div>
+                            <div><img src="${logo}" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="modif" onclick="modification('${id}','${playercart}','${rating}','${position}', '${imagedejeue}', '${pace}', '${shoting}', '${passing}', '${dribling}', '${difending}', '${physical}', '${flag}', '${logo}')">modification</button>
+                    <button class="surision">supprimer</button>
+                </div>
+            `;
+            
+            let formalert = document.querySelector('.formalert');
+            formalert.innerHTML = '';
+            formalert.appendChild(formmodfification);
+            formalert.classList.remove('heddin');
+          
+           console.log(clickedCard.querySelector('.playerId'))
+           
+        }
+        
+
+    });
+    
+    function modification(id,playercart, rating, position, imagedejeue, pace, shoting, passing, dribling, difending, physical, flag, logo) {
+       
+        // posion de la form modification
+        const formContenermodiffictionr = document.getElementById('formContenermodiffictionr');
+        
+        formContenermodiffictionr.classList.remove('heddin');
+        
+        // entrez les valeur a les input
+        document.getElementById('playerIdmodfid').value = id ;
+        document.getElementById('namemodfmodifid').value = playercart;
+        let namemod = playercart;
+        document.getElementById('positionmodifid').value = position;
+        document.getElementById('photomodfid').value = imagedejeue;
+        document.getElementById('flagmodifid').value = flag;
+        document.getElementById('clubmodifid').value = logo; 
+        document.getElementById('logomodfid').value = logo;
+        document.getElementById('ratingmodifid').value = rating;
+        document.getElementById('pacemodfd').value = pace;
+        document.getElementById('shootingmodifid').value = shoting;
+        document.getElementById('passingmodfid').value = passing;
+        document.getElementById('dribblingmodifid').value = dribling;
+        document.getElementById('defendingmodifid').value = difending;
+        document.getElementById('physicalmodifid').value = physical;
+    
+let buttonmetreajour = document.getElementById('buttonmetreajour')
+
+buttonmetreajour.addEventListener('click', () => {
+    const playerId = document.getElementById('playerId').value ; 
+    const updatedPlayercart = document.getElementById('namemodfmodifid').value;
+    const updatedPosition = document.getElementById('positionmodifid').value;
+    const updatedImage = document.getElementById('photomodfid').value;
+    const updatedFlag = document.getElementById('flagmodifid').value;
+    const updatedClub = document.getElementById('clubmodifid').value;
+    const updatedRating = document.getElementById('ratingmodifid').value;
+    const updatedPace = document.getElementById('pacemodfd').value;
+    const updatedShooting = document.getElementById('shootingmodifid').value;
+    const updatedPassing = document.getElementById('passingmodfid').value;
+    const updatedDribbling = document.getElementById('dribblingmodifid').value;
+    const updatedDefending = document.getElementById('defendingmodifid').value;
+    const updatedPhysical = document.getElementById('physicalmodifid').value;
+
+   
+
+   
+
+
+        Data.forEach(element => {
+            console.log(element)
+            if (element.NAme === namemod) {
+                element.NAme = updatedPlayercart;
+                element.position = updatedPosition;
+                element.photo = updatedImage;
+                element.flag = updatedFlag;
+                element.club = updatedClub;
+                element.logo = updatedFlag;
+                element.rating = updatedRating;
+                element.shooting = updatedShooting;
+                element.passing = updatedPassing;
+                element.dribbling = updatedDribbling;
+                element.defending = updatedDefending;
+                element.physical = updatedPhysical;
+            }
+            else{
+                console.log(namemod)
+            }
+        });
+        
+    
+        // sete les modification don local storige
+        localStorage.setItem('players', JSON.stringify(Data));
+        // pdette 
+        let formalert = document.querySelector('.formalert');
+        formalert.classList.add('heddin');
+        formContenermodiffictionr.classList.add('heddin');
+
+
+})};
+
+
+
+
+
+
+
+// 1733013200470
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

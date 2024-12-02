@@ -306,3 +306,9 @@ html{
 
 /* style de form updat et suprision END */
 
+#buttonmetreajour {
+  background: #0184f8;
+  height: 1.5rem;
+  width: 5rem;
+  color: white;
+}
