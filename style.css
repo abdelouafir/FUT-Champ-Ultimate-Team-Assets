@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url(./src/assets/img/stadium_background.webp);
+   background-image: url(src/assets/img/black\ image.jpg);
     padding: 2rem;
 }
 html{
@@ -312,4 +312,33 @@ html{
   width: 5rem;
   color: white;
   border: solid ;
+}
+
+#btn-choix-joueur {
+    border: solid 2px green;
+    font-weight: 600;
+}
+#btn-choix-golkepper {
+    border: solid 2px red;
+    font-weight: 600;
+
+}
+
+#btn-choix-joueur:hover {
+    background: green;
+    color: white;
+}
+#btn-choix-golkepper:hover {
+    background: red;
+    color: white;
+    font-weight: 600;
+
+}
+
+.inputtyprnumber {
+    display: flex;
+}
+#physical,#defending,#dribbling,#passing,#pace,#shooting {
+    width: 8.5rem;
+    
 }

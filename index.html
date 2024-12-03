@@ -76,8 +76,8 @@
             <div id="formContenerChoix" class="formContenerchoix">
                 <h2 class="message-choix">lejouer que vous shohaitez ajoutez</h2>
                 <div class="choix-jouer">
-                    <div><button id="btn-choix-joueur">goal keeper</button></div>
-                    <div><button id="btn-choix-golkepper">regular player</button></div>
+                    <div><button id="btn-choix-joueur">Autre joueur</button></div>
+                    <div><button id="btn-choix-golkepper">Gardien de but</button></div>
                 </div>
             </div>
             <!-- form de jeur  -->
@@ -98,12 +98,12 @@
                 <div>
                     <input type="hidden" class='playerId' id="playerId" value="">
                     <label for="NAme">entrez nome de jeur</label>
-                    <input id="NAme" type="text">
+                    <input id="NAme" type="text" placeholder="vini jr">
                 </div>
                 <div>
                     <label for="photo">photo</label>
                     <div class="inputPhoto">
-                        <input id="photo" type="url">
+                        <input id="photo" type="url" placeholder="https://...">
                     </div>
                    
                 </div>
@@ -111,47 +111,54 @@
                 <div>
                     <label for="flag">flag</label>
                     <div class="flagInput">
-                        <input id="flag" type="url">
+                        <input id="flag" type="url" placeholder="https://...">
                     </div>
                 </div>
                 <div>
                     <label for="club">club</label>
-                    <input id="club" type="text">
+                    <input id="club" type="text" placeholder="rial madrid">
                 </div>
-                <div>
+                <div >
                     <label for="logo">logo</label>
                     <div class="logoinput">
-                        <input id="logo" type="url">
+                        <input id="logo" type="url" placeholder="https://...">
                     </div>
                 </div>
                 <div>
                     <label for="rating">rating</label>
-                    <input id="rating" type="text">
+                    <input id="rating" type="number" placeholder="number (99 - 10)">
                 </div>
-                <div>
-                    <label for="pace">pace</label>
-                    <input id="pace" type="number">
+                <div  class="inputtyprnumber">
+                    <div>
+                        <label for="pace">pace</label>
+                        <input id="pace" type="number" placeholder="number (99 - 10)">
+                    </div>
+                    <div>
+                        <label for="shooting">shooting</label>
+                        <input id="shooting" type="number" placeholder="number (99 - 10)">
+                    </div>
                 </div>
-                <div>
-                    <label for="shooting">shooting</label>
-                    <input id="shooting" type="number">
+                <div class="inputtyprnumber">
+                    <div>
+                        <label for="passing">passing</label>
+                        <input id="passing" type="number" placeholder="number (99 - 10)">
+                    </div>
+                    <div>
+                        <label for="dribbling">dribbling</label>
+                        <input id="dribbling" type="number">
+                    </div>
                 </div>
-                <div>
-                    <label for="passing">passing</label>
-                    <input id="passing" type="number">
+                <div class="inputtyprnumber">
+                    <div>
+                        <label for="defending">defending</label>
+                        <input id="defending" type="number" placeholder="number (99 - 10)">
+                    </div>
+                    <div>
+                        <label for="physical">physical</label>
+                        <input id="physical" type="number" placeholder="number (99 - 10)">
+                    </div>
                 </div>
-                <div>
-                    <label for="dribbling">dribbling</label>
-                    <input id="dribbling" type="number">
-                </div>
-                <div>
-                    <label for="defending">defending</label>
-                    <input id="defending" type="number">
-                </div>
-                <div>
-                    <label for="physical">physical</label>
-                    <input id="physical" type="number">
-                </div>
+              
                 <div class="buttonAddjouer">
                     <button id="buttonAddjouer">add new jeur</button>
                 </div>
@@ -160,18 +167,18 @@
          <div id="formContenerGK" class="formContener heddin">
             <div>
                 <label for="positionGK">position</label>
-                <select name="positionGK" id="positionGK">
+                <select name="positionGK" class="positionGK" id="positionGK">
                     <option value="GK">GK</option>
                 </select>
             </div>
             <div>
                 <label for="NAmeGK">entrez nome de jeur</label>
-                <input id="NAmeGK" type="text">
+                <input id="NAmeGK" type="text" placeholder="kepa">
             </div>
             <div>
                 <label for="photoGK">photo</label>
                 <div class="inputPhoto">
-                    <input id="photoGK" type="url">
+                    <input id="photoGK" type="url"placeholder='https://...'>
                 </div>
                
             </div>
@@ -179,46 +186,46 @@
             <div>
                 <label for="flagGK">flag</label>
                 <div class="flagInput">
-                    <input id="flagGK" type="url">
+                    <input id="flagGK" type="url" placeholder="https://...">
                 </div>
             </div>
             <div>
                 <label for="clubGK">club</label>
-                <input id="clubGK" type="text">
+                <input id="clubGK" type="text" placeholder="Rial madrid">
             </div>
             <div>
                 <label for="logoGK">logo</label>
                 <div class="logoinput">
-                    <input id="logoGK" type="url">
+                    <input id="logoGK" type="url" placeholder="https://...">
                 </div>
             </div>
             <div>
                 <label for="ratingGK">rating</label>
-                <input id="ratingGK" type="number">
+                <input id="ratingGK" type="number" placeholder="number (99 - 10)">
             </div>
             <div>
                 <label for="divingGK">diving</label>
-                <input id="divingGK" type="number">
+                <input id="divingGK" type="number" placeholder="number (99 - 10)">
             </div>
             <div>
                 <label for="handlingGK">handling</label>
-                <input id="handlingGK" type="number">
+                <input id="handlingGK" type="number" placeholder="number (99 - 10)">
             </div>
             <div>
                 <label for="kickingGK">kicking</label>
-                <input id="kickingGK" type="number">
+                <input id="kickingGK" type="number" placeholder="number (99 - 10)">
             </div>
             <div>
                 <label for="reflexesGK">reflexes</label>
-                <input id="reflexesGK" type="number">
+                <input id="reflexesGK" type="number" placeholder="number (99 - 10)">
             </div>
             <div>
                 <label for="speedGK">speed</label>
-                <input id="speedGK" type="number">
+                <input id="speedGK" type="number" placeholder="number (99 - 10)">
             </div>
             <div>
                 <label for="positioningGK">positioning</label>
-                <input id="positioningGK" type="number">
+                <input id="positioningGK" type="number" placeholder="number (99 - 10)">
             </div>
             <div class="buttonAddjouer">
                 <button id="buttonAddjouer2">add new jeur</button>

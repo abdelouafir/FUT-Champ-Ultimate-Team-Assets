@@ -19,7 +19,6 @@
         choix = 0 ;
     })
 
-
     // ajoute jouer a tiran
     let buttonAddjouer = document.getElementById('buttonAddjouer');
     let buttonAddjouer2 = document.getElementById('buttonAddjouer2');
@@ -49,7 +48,6 @@
     buttonAddjouer.addEventListener('click', envoiyreDatatableu)
     buttonAddjouer2.addEventListener('click', envoiyreDatatableu)
 
-    
     // function qui ajoutee les object a aryy
     function envoiyreDatatableu () {
         let position = document.getElementById('position');
@@ -1120,16 +1118,4 @@ function validisionGK() {
     alert("Form et valid!");
    return true;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
