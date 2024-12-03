@@ -222,6 +222,7 @@ html{
 
 .prrantPRG {
     display: flex;
+  
 }
 .formContener input {
     width: 17rem;
@@ -341,4 +342,121 @@ html{
 #physical,#defending,#dribbling,#passing,#pace,#shooting {
     width: 8.5rem;
     
+}
+@media (max-width : 720px) {
+    body{
+        padding: 0px;
+        box-sizing: border-box;
+        height: 120vh;
+    }
+    .tiran {
+        margin: 0;
+        order: 2;
+        width: 100%;
+    }
+    .prrantPRG {
+        display: flex;
+        flex-wrap:wrap ;
+        gap: 2rem;
+        justify-content: space-between;
+         
+    }
+    .form {
+        order: 1;
+        width: 100%;
+    }
+    .tiran .jeurGK {
+        position: relative;
+        bottom: 5rem;
+        left: 15rem;
+    }
+    .formContener {
+        width: 100%;
+    }
+    .formContener input {
+        width: 90%;
+     
+    }
+    .inputtyprnumber div {
+        width: 100%;
+    }
+    .choix-jouer{
+        width: 100%;
+        display: flex;
+    }
+    .message-choix {
+        margin-top: 10px;
+    }
+         .formContener select {
+        width: 90%;
+    }
+    .formContener label {
+        display: block;
+    }
+}
+/* tab */
+@media (min-width : 720px) and (max-width : 950px) {
+    body{
+        padding: 0px;
+        box-sizing: border-box;
+        height: 120vh;
+    }
+    .tiran {
+        margin: 0;
+        order: 2;
+        width: 100%;
+    }
+    .prrantPRG {
+        display: flex;
+        flex-wrap:wrap ;
+        gap: 2rem;
+        justify-content: space-between;
+         
+    }
+    .form {
+        order: 1;
+        width: 100%;
+    }
+    .tiran .jeurGK {
+        position: relative;
+        top: 3rem;
+        left: 19rem;
+    }
+    .formContener {
+        width: 100%;
+    }
+    .formContener input {
+        width: 90%;
+     
+    }
+    .inputtyprnumber div {
+        width: 100%;
+    }
+    .choix-jouer{
+        width: 100%;
+        display: flex;
+    }
+    .message-choix {
+        margin-top: 10px;
+    }
+    .formContener select {
+        width: 90%;
+    }
+    .formContener label {
+        display: block;
+    }
+}
+
+@media (min-width : 950px) and (max-width : 1331px) {
+    
+    
+    .tiran .jeurGK {
+        position: relative;
+        bottom:6rem;
+        left: 15rem;
+    }
+    
+    .formContener label {
+        display: block;
+    }
 }
