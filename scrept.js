@@ -970,6 +970,8 @@ function deletePlayer(playercart) {
         alert(`${playercart} suprimé le jouer`);
     } else {
         alert('l opération a été annulée');
+
+        console.log()
     }
 }
 
