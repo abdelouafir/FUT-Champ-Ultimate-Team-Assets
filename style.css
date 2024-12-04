@@ -204,6 +204,10 @@ html{
     padding: 1rem;
     width: fit-content;
 }
+.formContenerchoix {
+    background: #0000004b;
+
+}
 .choix-jouer {
     width: 20rem;
     display: flex;
